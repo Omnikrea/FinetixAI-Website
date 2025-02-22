@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinetixAI - AI-Powered Finance & Wealth Building</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-blue-600 text-white text-center p-6">
+        <h1 class="text-3xl font-bold">FinetixAI</h1>
+        <p class="text-lg">AI-Driven Finance for Smarter Investing & Automation</p>
+    </header>
+    
+    <main class="max-w-4xl mx-auto p-6">
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold">What is FinetixAI?</h2>
+            <p class="mt-2">FinetixAI leverages AI and automation to simplify finance, investing, and wealth-building. Our mission is to help you capitalize on AI-driven opportunities in finance.</p>
+        </section>
+        
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold">Latest AI-Generated Insights</h2>
+            <div id="tweets" class="mt-4 space-y-4">
+                <p>Loading latest content...</p>
+            </div>
+        </section>
+        
+        <section class="mb-8">
+            <h2 class="text-2xl font-bold">Affiliate Disclaimer</h2>
+            <p class="mt-2">We may earn commissions from some of the links on this site. Our recommendations are based on trusted research and AI-driven analysis.</p>
+        </section>
+    </main>
+    
+    <footer class="text-center p-4 bg-gray-800 text-white">
+        <p>&copy; 2025 FinetixAI. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        async function fetchTweets() {
+            const tweets = [
+                "🚀 AI is revolutionizing finance—are you taking advantage? #InvestSmart",
+                "💡 AI-driven trading bots are outperforming humans. Time to automate your investments!",
+                "📈 Passive income in 2025? AI-powered investing is the future!"
+            ];
+            const container = document.getElementById("tweets");
+            container.innerHTML = tweets.map(tweet => `<p class='bg-white p-4 rounded shadow'>${tweet}</p>`).join('');
+        }
+        fetchTweets();
+    </script>
+</body>
+</html>
