@@ -30,13 +30,13 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Omnikrea/finetixai-website.git"
+    "url": "git+https://github.com/Omnikrea/FinetixAI-Website.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Omnikrea/finetixai-website/issues"
+    "url": "https://github.com/Omnikrea/FinetixAI-Website/issues"
   },
-  "homepage": "https://github.com/Omnikrea/finetixai-website#readme"
+  "homepage": "https://github.com/Omnikrea/FinetixAI-Website#readme"
 }
