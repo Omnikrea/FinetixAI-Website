@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinetixAI - AI-Driven Financial Intelligence</title>
+  <meta name="description" content="FinetixAI provides AI-driven financial insights, real-time market data, and personalized advisory.">
+
+  <!-- REVISED: Link CSS from the same folder -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">FinetixAI</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#ai-chatbot">AI Advisor</a></li>
+        <li><a href="#crypto-widget">Crypto</a></li>
+        <li><a href="#news-section">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+    
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <h1>Empower Your Financial Journey with AI</h1>
+      <p>
+        Get real-time market insights, personalized advice, and advanced analytics—all in one place.
+      </p>
+      <button onclick="window.location.href='#ai-chatbot'">Try Our AI Advisor</button>
+    </div>
+  </section>
+  
+  <!-- ==================== AI CHATBOT SECTION ==================== -->
+  <section id="ai-chatbot" class="section">
+    <h2>AI Financial Advisor</h2>
+    <p>Ask questions, get insights, and receive guidance from our GPT-4o-driven chatbot.</p>
+    <!--
+      NOTE:
+      Replace the iframe src with your chatbot embed link or a custom front-end widget calling your backend API.
+    -->
+    <iframe
+      src="https://example.com/your-gpt4o-chatbot-embed"
+      frameborder="0"
+      class="chatbot-frame">
+    </iframe>
+  </section>
+  
+  <!-- ==================== CRYPTO WIDGET SECTION ==================== -->
+  <section id="crypto-widget" class="section">
+    <h2>Live Crypto Market Data</h2>
+    <p>Stay updated with real-time crypto prices and trends.</p>
+    <!--
+      NOTE:
+      Replace 'YOUR_COINBASE_WIDGET_EMBED_URL' with the actual Coinbase (or alternative) widget embed code.
+    -->
+    <iframe
+      src="https://example.com/YOUR_COINBASE_WIDGET_EMBED_URL"
+      frameborder="0"
+      class="crypto-frame">
+    </iframe>
+  </section>
+  
+  <!-- ==================== FINANCIAL NEWS SECTION ==================== -->
+  <section id="news-section" class="section">
+    <h2>Latest Financial News</h2>
+    <p>Curated, AI-filtered headlines to keep you ahead of the market.</p>
+    <div id="news-feed" class="news-container">
+      <!-- News content will be loaded dynamically via JavaScript -->
+    </div>
+  </section>
+  
+  <!-- ==================== FOOTER SECTION ==================== -->
+  <footer id="contact" class="footer-section">
+    <div class="footer-content">
+      <p>© 2025 FinetixAI. All rights reserved.</p>
+      <p>Email: <a href="mailto:info@finetixai.com">info@finetixai.com</a></p>
+    </div>
+  </footer>
+
+  <!-- REVISED: Script reference from the same folder -->
+  <script src="script.js"></script>
+</body>
+</html>
