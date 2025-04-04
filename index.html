@@ -1,88 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FinetixAI - AI-Driven Financial Intelligence</title>
-  <meta name="description" content="FinetixAI provides AI-driven financial insights, real-time market data, and personalized advisory.">
+  <meta charset="UTF-8">
+  <title>FinetixAI | Empower Your Finances with AI</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gpt-btn {
+      background-color: navy;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
 
-  <!-- REVISED: Link CSS from the same folder -->
-  <link rel="stylesheet" href="style.css" />
+    .gpt-btn:hover {
+      background-color: teal;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .crypto-widget {
+      background-color: #f5f8fc;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 350px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+    }
+
+    .crypto-widget h3 {
+      margin-bottom: 15px;
+      color: #007bff;
+    }
+
+    .crypto-widget div {
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .disclaimer {
+      font-size: 12px;
+      color: gray;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-  <!-- ==================== HEADER / NAVBAR ==================== -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">FinetixAI</div>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#ai-chatbot">AI Advisor</a></li>
-        <li><a href="#crypto-widget">Crypto</a></li>
-        <li><a href="#news-section">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-    
-  <!-- ==================== HERO SECTION ==================== -->
-  <section id="hero" class="hero-section">
-    <div class="hero-content">
-      <h1>Empower Your Financial Journey with AI</h1>
-      <p>
-        Get real-time market insights, personalized advice, and advanced analytics—all in one place.
-      </p>
-      <button onclick="window.location.href='#ai-chatbot'">Try Our AI Advisor</button>
-    </div>
-  </section>
-  
-  <!-- ==================== AI CHATBOT SECTION ==================== -->
-  <section id="ai-chatbot" class="section">
-    <h2>AI Financial Advisor</h2>
-    <p>Ask questions, get insights, and receive guidance from our GPT-4o-driven chatbot.</p>
-    <!--
-      NOTE:
-      Replace the iframe src with your chatbot embed link or a custom front-end widget calling your backend API.
-    -->
-    <iframe
-      src="https://example.com/your-gpt4o-chatbot-embed"
-      frameborder="0"
-      class="chatbot-frame">
-    </iframe>
-  </section>
-  
-  <!-- ==================== CRYPTO WIDGET SECTION ==================== -->
-  <section id="crypto-widget" class="section">
-    <h2>Live Crypto Market Data</h2>
-    <p>Stay updated with real-time crypto prices and trends.</p>
-    <!--
-      NOTE:
-      Replace 'YOUR_COINBASE_WIDGET_EMBED_URL' with the actual Coinbase (or alternative) widget embed code.
-    -->
-    <iframe
-      src="https://example.com/YOUR_COINBASE_WIDGET_EMBED_URL"
-      frameborder="0"
-      class="crypto-frame">
-    </iframe>
-  </section>
-  
-  <!-- ==================== FINANCIAL NEWS SECTION ==================== -->
-  <section id="news-section" class="section">
-    <h2>Latest Financial News</h2>
-    <p>Curated, AI-filtered headlines to keep you ahead of the market.</p>
-    <div id="news-feed" class="news-container">
-      <!-- News content will be loaded dynamically via JavaScript -->
-    </div>
-  </section>
-  
-  <!-- ==================== FOOTER SECTION ==================== -->
-  <footer id="contact" class="footer-section">
-    <div class="footer-content">
-      <p>© 2025 FinetixAI. All rights reserved.</p>
-      <p>Email: <a href="mailto:info@finetixai.com">info@finetixai.com</a></p>
-    </div>
-  </footer>
+<header>
+  <nav class="navbar">
+    <div class="logo">FinetixAI</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="crypto.html">Crypto</a></li>
+      <li><a href="news.html">AI & Finance News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <!-- REVISED: Script reference from the same folder -->
-  <script src="script.js"></script>
+<!-- Hero Section -->
+<section id="hero">
+  <h1>Empowering Your Financial Future Through AI</h1>
+  <p>AI-driven insights, real-time crypto analytics, and personalized advice at your fingertips.</p>
+  <button onclick="location.href='#chatbot'">Consult GPT-4o Financial Advisor</button>
+</section>
+
+<!-- AI Chatbot -->
+<section id="chatbot">
+  <h2>GPT-4o Financial Advisor</h2>
+  <input type="text" id="query" placeholder="Ask GPT-4o..." />
+  <button id="ask-btn" class="gpt-btn">Ask GPT-4o</button>
+  <div id="gpt-response"></div>
+  <small class="disclaimer">Disclaimer: FinetixAI is not responsible for financial outcomes from advice received here.</small>
+</section>
+
+<!-- Crypto Widget -->
+<section id="crypto-widget">
+  <h2>Crypto Market (Hourly Updates)</h2>
+  <div class="crypto-widget">
+    <h3>Live Cryptocurrency Prices</h3>
+    <div id="btc-price">BTC: Loading...</div>
+    <div id="eth-price">ETH: Loading...</div>
+  </div>
+  <small class="disclaimer">Disclaimer: Crypto investing involves risk. FinetixAI is not liable for losses.</small>
+</section>
+
+<!-- Latest News -->
+<section id="news">
+  <h2>Latest Financial & AI News</h2>
+  <div id="rss-feed">Loading news...</div>
+  <button onclick="location.href='news.html'">Explore More</button>
+</section>
+
+<!-- Affiliate Disclosure -->
+<section id="affiliate">
+  <p><strong>Affiliate Disclosure:</strong> FinetixAI receives compensation from affiliate partnerships. Purchases made through links may result in earnings for FinetixAI at no extra cost to you. Thank you for your support.</p>
+</section>
+
+<footer>
+  <p>© 2025 FinetixAI. All Rights Reserved. | <a href="terms.html">Terms of Use</a> | <a href="privacy.html">Privacy Policy</a></p>
+</footer>
+
+<script>
+  async function fetchCryptoPrice(cryptoSymbol, elementId) {
+    try {
+      const response = await fetch(`https://api.exchange.coinbase.com/products/${cryptoSymbol}/ticker`);
+      const data = await response.json();
+      document.getElementById(elementId).innerHTML = `${cryptoSymbol.replace('-USD', '')}: $${parseFloat(data.price).toLocaleString()} (${new Date(data.time).toLocaleTimeString()})`;
+    } catch (error) {
+      document.getElementById(elementId).innerText = `${cryptoSymbol}: Data unavailable`;
+    }
+  }
+
+  function updateCryptoPrices() {
+    fetchCryptoPrice('BTC-USD', 'btc-price');
+    fetchCryptoPrice('ETH-USD', 'eth-price');
+  }
+
+  updateCryptoPrices();
+  setInterval(updateCryptoPrices, 3600000); // Refresh hourly
+</script>
+<script src="script.js"></script>
 </body>
 </html>
+
+

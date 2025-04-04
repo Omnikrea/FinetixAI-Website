@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Debugging: Ensures Tailwind is working */
+body {
+  background-color: #f3f4f6; /* This is gray-100 */
+  color: #111827; /* This is gray-900 */
+}
+
